@@ -13,3 +13,23 @@ Scratchpad for infrastructure setup and recurring fixes.
 ## Recurring fixes
 - If the scheduler wedges, drain the queue and restart the leader.
 - Cert renewal is automated, but double-check the wildcard each cycle.
+
+## H2 2026 Platform Roadmap
+**Source:** Asana Task 1215350949678983
+
+### Overview
+Draft roadmap focused on three core themes: reliability, search quality, and on-device AI capabilities.
+
+### Q3 2026 Initiatives
+- Migrate ranking service to new feature store (Platform team) — Target: August
+- Roll out on-device summarization beta to 5% (Apps/AI team) — Target: September
+- Reduce p99 latency on autocomplete by 20% (Search Infra team)
+
+### Q4 2026 Initiatives
+- General availability for on-device summarization (Apps/AI team)
+- Implement multi-region failover for query pipeline (SRE team)
+- Deprecate legacy index shards v3 (Search Infra team)
+
+### Key Dependencies & Constraints
+- Feature store migration is a blocking dependency for summarization GA
+- SRE team has 2 open staffing requisitions that may impact timeline
